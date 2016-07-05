@@ -1127,7 +1127,7 @@ def open_http_urllib(method, url, values):
         url += urlencode(values)
         data = None
     else:
-        data = urlencode(values)
+        data = urlencode(values).encode('utf-8')
     return urlopen(url, data)
 
 
